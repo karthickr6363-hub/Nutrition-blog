@@ -21,6 +21,18 @@ function setupSmoothScroll() {
 
       event.preventDefault();
       target.scrollIntoView({ behavior: "smooth", block: "start" });
+
+      // Update active state after scroll
+      setTimeout(() => {
+        const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+        navLinks.forEach((navLink) => {
+          navLink.classList.remove('is-active');
+          const href = navLink.getAttribute('href');
+          if (href && href.slice(1) === targetId) {
+            navLink.classList.add('is-active');
+          }
+        });
+      }, 300); // Delay to account for smooth scroll
     });
   });
 }
@@ -158,6 +170,131 @@ function setupArticleModal() {
 }
 
 
+// Active state menu highlighting
+function setupActiveNavHighlight() {
+  const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+  const sections = document.querySelectorAll('section[id], main[id]');
+  
+  if (navLinks.length === 0 || sections.length === 0) return;
+
+  function updateActiveNav() {
+    const scrollPosition = window.scrollY + 150; // Offset for better detection
+    
+    let currentSection = '';
+    
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.offsetHeight;
+      
+      if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+        currentSection = section.getAttribute('id');
+      }
+    });
+
+    navLinks.forEach((link) => {
+      link.classList.remove('is-active');
+      const href = link.getAttribute('href');
+      if (href && href.slice(1) === currentSection) {
+        link.classList.add('is-active');
+      }
+    });
+
+    // Handle home section when at top of page
+    if (window.scrollY < 100 && !window.location.hash) {
+      navLinks.forEach((link) => {
+        const href = link.getAttribute('href');
+        if (href === '#home' || href === '#') {
+          link.classList.add('is-active');
+        } else {
+          link.classList.remove('is-active');
+        }
+      });
+    }
+  }
+
+  // Set initial active state based on URL hash if present
+  if (window.location.hash) {
+    const hash = window.location.hash.slice(1);
+    navLinks.forEach((link) => {
+      link.classList.remove('is-active');
+      const href = link.getAttribute('href');
+      if (href && href.slice(1) === hash) {
+        link.classList.add('is-active');
+      }
+    });
+    // Scroll to section after a brief delay to ensure page is loaded
+    setTimeout(() => {
+      const target = document.getElementById(hash);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, 100);
+  } else {
+    // Set initial active state
+    updateActiveNav();
+  }
+
+  // Update on scroll
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        updateActiveNav();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+}
+
+// Dashboard navigation active state
+function setupDashboardNavHighlight() {
+  const dashboardNavItems = document.querySelectorAll('.dashboard-nav-item');
+  
+  if (dashboardNavItems.length === 0) return;
+
+  function updateDashboardNav() {
+    const currentPath = window.location.pathname;
+    const currentHash = window.location.hash;
+    const currentFile = currentPath.split('/').pop() || currentPath;
+
+    dashboardNavItems.forEach((item) => {
+      item.classList.remove('is-active');
+      const href = item.getAttribute('href');
+      
+      if (!href) return;
+
+      const hrefPath = href.split('#')[0];
+      const hrefHash = href.includes('#') ? href.split('#')[1] : '';
+      const hrefFile = hrefPath.split('/').pop() || hrefPath;
+
+      // Check if it's the current page file
+      const isCurrentPage = hrefFile === currentFile || (currentFile.includes(hrefFile) && hrefFile !== '');
+
+      if (isCurrentPage) {
+        // If both have hash or both don't have hash, or current hash matches
+        if ((!hrefHash && !currentHash) || (hrefHash && currentHash && hrefHash === currentHash.slice(1))) {
+          item.classList.add('is-active');
+        }
+        // If current page has no hash and this item has no hash (Overview)
+        else if (!currentHash && !hrefHash) {
+          item.classList.add('is-active');
+        }
+        // If current hash matches this item's hash
+        else if (currentHash && hrefHash && currentHash.slice(1) === hrefHash) {
+          item.classList.add('is-active');
+        }
+      }
+    });
+  }
+
+  // Set initial active state
+  updateDashboardNav();
+
+  // Update on hash change (for same-page navigation)
+  window.addEventListener('hashchange', updateDashboardNav);
+}
+
 // Set current year in footer
 function setCurrentYear() {
   const el = document.getElementById("year");
@@ -270,6 +407,8 @@ document.addEventListener("DOMContentLoaded", () => {
   setupAccountDropdown();
   setupContactForm();
   setCurrentYear();
+  setupActiveNavHighlight();
+  setupDashboardNavHighlight();
 });
 
 

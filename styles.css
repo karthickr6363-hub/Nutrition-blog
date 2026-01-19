@@ -293,6 +293,15 @@ button {
   width: 100%;
 }
 
+.nav-links > li > a.is-active {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.nav-links > li > a.is-active::after {
+  width: 100%;
+}
+
 /* Buttons in navigation */
 .nav-links .btn {
   padding-block: 0.5rem;
