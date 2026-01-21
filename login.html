@@ -1,211 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login | Nutrition Blog</title>
-    <meta
-      name="description"
-      content="Login to your Nutrition Blog account to access exclusive content and personalized nutrition tips."
-    />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <link rel="alternate icon" href="favicon.ico" />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div class="auth-container">
-      <div class="auth-box">
-        <a href="index.html" class="auth-logo">
-          <svg class="logo-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 2C8 2 5 5 5 9C5 13 8 18 12 20C16 18 19 13 19 9C19 5 16 2 12 2Z" fill="currentColor" fill-opacity="0.9"/>
-            <path d="M12 4C9.5 4 7.5 6 7.5 8.5C7.5 11 9.5 13.5 12 15C14.5 13.5 16.5 11 16.5 8.5C16.5 6 14.5 4 12 4Z" fill="white" fill-opacity="0.9"/>
-            <path d="M12 6L10 8L12 10L14 8L12 6Z" fill="currentColor" fill-opacity="0.6"/>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | Nutrition Blog</title>
+  <meta name="description"
+    content="Login to your Nutrition Blog account to access exclusive content and personalized nutrition tips." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="alternate icon" href="favicon.ico" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <div class="auth-container">
+    <div class="auth-box">
+      <a href="index.html" class="auth-logo">
+        <svg class="logo-icon" width="32" height="32" viewBox="0 0 24 24" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2C8 2 5 5 5 9C5 13 8 18 12 20C16 18 19 13 19 9C19 5 16 2 12 2Z" fill="currentColor"
+            fill-opacity="0.9" />
+          <path d="M12 4C9.5 4 7.5 6 7.5 8.5C7.5 11 9.5 13.5 12 15C14.5 13.5 16.5 11 16.5 8.5C16.5 6 14.5 4 12 4Z"
+            fill="white" fill-opacity="0.9" />
+          <path d="M12 6L10 8L12 10L14 8L12 6Z" fill="currentColor" fill-opacity="0.6" />
+        </svg>
+        Nutrition<span>Blog</span>
+      </a>
+
+      <div class="auth-header">
+        <h1>Welcome Back</h1>
+        <p>Sign in to continue your nutrition journey</p>
+      </div>
+
+      <form id="login-form" class="auth-form" novalidate>
+        <div class="form-field">
+          <label for="login-email">Email</label>
+          <input type="email" id="login-email" name="email" autocomplete="email" placeholder="Enter your email"
+            required />
+          <p class="field-error" data-for="email"></p>
+        </div>
+
+        <div class="form-field">
+          <label for="login-password">Password</label>
+          <input type="password" id="login-password" name="password" autocomplete="current-password"
+            placeholder="Enter your password" required />
+          <p class="field-error" data-for="password"></p>
+        </div>
+
+        <div class="form-options">
+          <label class="checkbox-label">
+            <input type="checkbox" name="remember" />
+            <span>Remember me</span>
+          </label>
+          <a href="#" class="forgot-link">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-full">
+          Sign In
+        </button>
+
+        <p id="login-message" class="form-message" aria-live="polite"></p>
+      </form>
+
+      <div class="auth-divider">
+        <span>or</span>
+      </div>
+
+      <div class="social-login">
+        <button type="button" class="btn-social btn-google" onclick="handleGoogleLogin()">
+          <svg class="social-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
+              fill="#4285F4" />
+            <path
+              d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
+              fill="#34A853" />
+            <path
+              d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"
+              fill="#FBBC05" />
+            <path
+              d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
+              fill="#EA4335" />
           </svg>
-          Nutrition<span>Blog</span>
-        </a>
-        
-        <div class="auth-header">
-          <h1>Welcome Back</h1>
-          <p>Sign in to continue your nutrition journey</p>
-        </div>
+          Google
+        </button>
+        <button type="button" class="btn-social btn-facebook" onclick="handleFacebookLogin()">
+          <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+          </svg>
+          Facebook
+        </button>
+      </div>
 
-        <form id="login-form" class="auth-form" novalidate>
-          <div class="form-field">
-            <label for="login-email">Email</label>
-            <input
-              type="email"
-              id="login-email"
-              name="email"
-              autocomplete="email"
-              placeholder="Enter your email"
-              required
-            />
-            <p class="field-error" data-for="email"></p>
-          </div>
-
-          <div class="form-field">
-            <label for="login-password">Password</label>
-            <input
-              type="password"
-              id="login-password"
-              name="password"
-              autocomplete="current-password"
-              placeholder="Enter your password"
-              required
-            />
-            <p class="field-error" data-for="password"></p>
-          </div>
-
-          <div class="form-options">
-            <label class="checkbox-label">
-              <input type="checkbox" name="remember" />
-              <span>Remember me</span>
-            </label>
-            <a href="#" class="forgot-link">Forgot password?</a>
-          </div>
-
-          <button type="submit" class="btn btn-primary btn-full">
-            Sign In
-          </button>
-
-          <p id="login-message" class="form-message" aria-live="polite"></p>
-        </form>
-
-        <div class="auth-divider">
-          <span>or</span>
-        </div>
-
-        <div class="social-login">
-          <button type="button" class="btn-social btn-google" onclick="handleGoogleLogin()">
-            <svg class="social-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
-              <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
-              <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
-              <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
-            </svg>
-            Continue with Google
-          </button>
-          <button type="button" class="btn-social btn-facebook" onclick="handleFacebookLogin()">
-            <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-            </svg>
-            Continue with Facebook
-          </button>
-        </div>
-
-        <div class="auth-footer">
-          <p>
-            Don't have an account?
-            <a href="register.html" class="auth-link">Sign up here</a>
-          </p>
-        </div>
+      <div class="auth-footer">
+        <p>
+          Don't have an account?
+          <a href="register.html" class="auth-link">Sign up here</a>
+        </p>
       </div>
     </div>
+  </div>
 
-    <script src="scripts.js"></script>
-    <script>
-      // Login form handling
-      document.addEventListener("DOMContentLoaded", () => {
-        const form = document.getElementById("login-form");
-        const messageEl = document.getElementById("login-message");
+  <script src="scripts.js"></script>
+  <script>
+    // Login form handling
+    document.addEventListener("DOMContentLoaded", () => {
+      const form = document.getElementById("login-form");
+      const messageEl = document.getElementById("login-message");
 
-        function setFieldError(fieldName, message) {
-          const field = form.querySelector(`[name="${fieldName}"]`);
-          const wrapper = field?.closest(".form-field");
-          const errorEl = form.querySelector(`.field-error[data-for="${fieldName}"]`);
+      function setFieldError(fieldName, message) {
+        const field = form.querySelector(`[name="${fieldName}"]`);
+        const wrapper = field?.closest(".form-field");
+        const errorEl = form.querySelector(`.field-error[data-for="${fieldName}"]`);
 
-          if (!wrapper || !errorEl || !(field instanceof HTMLElement)) return;
+        if (!wrapper || !errorEl || !(field instanceof HTMLElement)) return;
 
-          if (message) {
-            wrapper.classList.add("form-field--error");
-            errorEl.textContent = message;
-          } else {
-            wrapper.classList.remove("form-field--error");
-            errorEl.textContent = "";
-          }
+        if (message) {
+          wrapper.classList.add("form-field--error");
+          errorEl.textContent = message;
+        } else {
+          wrapper.classList.remove("form-field--error");
+          errorEl.textContent = "";
+        }
+      }
+
+      function validateEmail(value) {
+        if (!value) return "Email is required.";
+        const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!pattern.test(value)) return "Please enter a valid email address.";
+        return "";
+      }
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        if (messageEl) {
+          messageEl.textContent = "";
+          messageEl.classList.remove("form-message--success", "form-message--error");
         }
 
-        function validateEmail(value) {
-          if (!value) return "Email is required.";
-          const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-          if (!pattern.test(value)) return "Please enter a valid email address.";
-          return "";
+        const formData = new FormData(form);
+        const email = String(formData.get("email") || "").trim();
+        const password = String(formData.get("password") || "").trim();
+
+        let isValid = true;
+
+        const emailError = validateEmail(email);
+        if (emailError) {
+          setFieldError("email", emailError);
+          isValid = false;
+        } else {
+          setFieldError("email", "");
         }
 
-        form.addEventListener("submit", (event) => {
-          event.preventDefault();
+        if (!password) {
+          setFieldError("password", "Password is required.");
+          isValid = false;
+        } else if (password.length < 6) {
+          setFieldError("password", "Password must be at least 6 characters.");
+          isValid = false;
+        } else {
+          setFieldError("password", "");
+        }
 
+        if (!isValid) {
           if (messageEl) {
-            messageEl.textContent = "";
-            messageEl.classList.remove("form-message--success", "form-message--error");
+            messageEl.textContent = "Please fix the errors and try again.";
+            messageEl.classList.add("form-message--error");
           }
+          return;
+        }
 
-          const formData = new FormData(form);
-          const email = String(formData.get("email") || "").trim();
-          const password = String(formData.get("password") || "").trim();
-
-          let isValid = true;
-
-          const emailError = validateEmail(email);
-          if (emailError) {
-            setFieldError("email", emailError);
-            isValid = false;
-          } else {
-            setFieldError("email", "");
-          }
-
-          if (!password) {
-            setFieldError("password", "Password is required.");
-            isValid = false;
-          } else if (password.length < 6) {
-            setFieldError("password", "Password must be at least 6 characters.");
-            isValid = false;
-          } else {
-            setFieldError("password", "");
-          }
-
-          if (!isValid) {
-            if (messageEl) {
-              messageEl.textContent = "Please fix the errors and try again.";
-              messageEl.classList.add("form-message--error");
-            }
-            return;
-          }
-
-          // Simulated successful login
-          if (messageEl) {
-            messageEl.textContent = "Login successful! Redirecting...";
-            messageEl.classList.add("form-message--success");
-            setTimeout(() => {
-              window.location.href = "index.html";
-            }, 1500);
-          }
-        });
+        // Simulated successful login
+        if (messageEl) {
+          messageEl.textContent = "Login successful! Redirecting...";
+          messageEl.classList.add("form-message--success");
+          setTimeout(() => {
+            window.location.href = "index.html";
+          }, 1500);
+        }
       });
+    });
 
-      // Social login handlers
-      function handleGoogleLogin() {
-        // In a real application, this would integrate with Google OAuth
-        alert("Google login would be implemented here. Redirecting to home page...");
-        setTimeout(() => {
-          window.location.href = "index.html";
-        }, 500);
-      }
+    // Social login handlers
+    function handleGoogleLogin() {
+      // In a real application, this would integrate with Google OAuth
+      alert("Google login would be implemented here. Redirecting to home page...");
+      setTimeout(() => {
+        window.location.href = "index.html";
+      }, 500);
+    }
 
-      function handleFacebookLogin() {
-        // In a real application, this would integrate with Facebook OAuth
-        alert("Facebook login would be implemented here. Redirecting to home page...");
-        setTimeout(() => {
-          window.location.href = "index.html";
-        }, 500);
-      }
-    </script>
-  </body>
+    function handleFacebookLogin() {
+      // In a real application, this would integrate with Facebook OAuth
+      alert("Facebook login would be implemented here. Redirecting to home page...");
+      setTimeout(() => {
+        window.location.href = "index.html";
+      }, 500);
+    }
+  </script>
+</body>
+
 </html>
-

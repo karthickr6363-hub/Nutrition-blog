@@ -1,883 +1,805 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nutrition Blog | Eat Better, Live Better</title>
-    <meta
-      name="description"
-      content="Nutrition Blog Website with evidence-based tips, healthy recipes, and simple guidance to help you eat better and live better."
-    />
-    <meta property="og:title" content="Nutrition Blog | Eat Better, Live Better" />
-    <meta
-      property="og:description"
-      content="Discover simple, science-backed nutrition tips, healthy recipes, and wellness habits."
-    />
-    <meta property="og:type" content="website" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <link rel="alternate icon" href="favicon.ico" />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <!-- Background Animation -->
-    <div class="bg-animation">
-      <div class="animated-shape shape-1"></div>
-      <div class="animated-shape shape-2"></div>
-      <div class="animated-shape shape-3"></div>
-      <div class="animated-shape shape-4"></div>
-      <div class="animated-shape shape-5"></div>
-      <div class="animated-shape shape-6"></div>
-    </div>
 
-    <header class="site-header">
-      <div class="container header-inner">
-        <a href="#home" class="logo">
-          <svg class="logo-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 2C8 2 5 5 5 9C5 13 8 18 12 20C16 18 19 13 19 9C19 5 16 2 12 2Z" fill="currentColor" fill-opacity="0.9"/>
-            <path d="M12 4C9.5 4 7.5 6 7.5 8.5C7.5 11 9.5 13.5 12 15C14.5 13.5 16.5 11 16.5 8.5C16.5 6 14.5 4 12 4Z" fill="white" fill-opacity="0.9"/>
-            <path d="M12 6L10 8L12 10L14 8L12 6Z" fill="currentColor" fill-opacity="0.6"/>
-          </svg>
-          Nutrition<span>Blog</span>
-        </a>
-        <nav class="site-nav" aria-label="Main navigation">
-          <button
-            class="nav-toggle"
-            aria-label="Toggle navigation"
-            aria-expanded="false"
-          >
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-          <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#articles">Latest Articles</a></li>
-            <li><a href="#tips">Tips</a></li>
-            <li><a href="#doctors">Experts</a></li>
-            <li><a href="#pricing">Pricing</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="login.html" class="btn btn-secondary">Login</a></li>
-            <li><a href="register.html" class="btn btn-primary">Sign Up</a></li>
-            <li class="nav-item-dropdown" aria-expanded="false">
-              <a href="#" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">
-                Account
-                <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </a>
-              <ul class="nav-dropdown-menu" role="menu">
-                <li role="none"><a href="user-dashboard.html" role="menuitem">Dashboard</a></li>
-                <li role="none"><a href="admin-dashboard.html" role="menuitem">Admin Panel</a></li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nutrition Blog | Eat Better, Live Better</title>
+  <meta name="description"
+    content="Nutrition Blog Website with evidence-based tips, healthy recipes, and simple guidance to help you eat better and live better." />
+  <meta property="og:title" content="Nutrition Blog | Eat Better, Live Better" />
+  <meta property="og:description"
+    content="Discover simple, science-backed nutrition tips, healthy recipes, and wellness habits." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="alternate icon" href="favicon.ico" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+</head>
 
-    <main id="home">
-      <!-- Hero Section -->
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="container hero-inner">
-          <div class="hero-text">
-            <span class="hero-badge">Science-backed nutrition for real life</span>
-            <h1 id="hero-title">Feel-good nutrition made simple</h1>
-            <p>
-              Build balanced meals, smarter habits, and sustainable routines with
-              practical guidance from certified nutrition experts.
-            </p>
-            <div class="hero-buttons">
-              <button class="btn btn-primary js-scroll-to-pricing">
-                View Pricing Plans
-              </button>
-              <button class="btn btn-secondary js-scroll-to-contact">
-                Contact Us
-              </button>
-            </div>
-            <div class="hero-highlights" aria-label="Key focus areas">
-              <span>Balanced Meals</span>
-              <span>Healthy Habits</span>
-              <span>Evidence-Based</span>
-              <span>Personalized Plans</span>
-            </div>
-            <div class="hero-metrics" aria-label="Community metrics">
-              <div class="hero-metric">
-                <p class="hero-metric-value">12k+</p>
-                <p class="hero-metric-label">Readers supported</p>
-              </div>
-              <div class="hero-metric">
-                <p class="hero-metric-value">250+</p>
-                <p class="hero-metric-label">Guided recipes</p>
-              </div>
-              <div class="hero-metric">
-                <p class="hero-metric-value">35 min</p>
-                <p class="hero-metric-label">Average prep time</p>
-              </div>
-            </div>
-          </div>
-          <div class="hero-image">
-            <div class="hero-image-frame">
-              <img
-                src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1200&q=80"
-                alt="Colorful healthy meal with fresh vegetables, grains, and proteins on a white plate"
-                loading="eager"
-                class="hero-main-image"
-              />
-              <div class="hero-floating-card hero-card-top">
-                <p class="hero-card-title">Weekly meal plan</p>
-                <p class="hero-card-value">Ready in 10 mins</p>
-              </div>
-              <div class="hero-floating-card hero-card-bottom">
-                <p class="hero-card-title">Macro balance</p>
-                <p class="hero-card-value">Protein + fiber focus</p>
-              </div>
-            </div>
-            <div class="hero-caption-row">
-              <span class="hero-caption-dot" aria-hidden="true"></span>
-              <p class="hero-caption">Colorful plates, simple choices, better health.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+<body>
+  <!-- Background Animation -->
+  <div class="bg-animation">
+    <div class="animated-shape shape-1"></div>
+    <div class="animated-shape shape-2"></div>
+    <div class="animated-shape shape-3"></div>
+    <div class="animated-shape shape-4"></div>
+    <div class="animated-shape shape-5"></div>
+    <div class="animated-shape shape-6"></div>
+  </div>
 
-      <!-- About Section -->
-      <section id="about" class="section" aria-labelledby="about-title">
-        <div class="container">
-          <header class="section-header">
-            <h2 id="about-title">About Nutrition Blog</h2>
-            <p>
-              Nutrition Blog is your friendly guide to evidence-based eating. No
-              fads, no fear—just practical tips you can actually use, with
-              visuals that make healthy food feel simple and inspiring.
-            </p>
-          </header>
-          <div class="about-grid">
-            <article class="card about-card">
-              <div class="card-image">
-                <img
-                  src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80"
-                  alt="Colorful bowl with fresh vegetables and grains"
-                  loading="lazy"
-                />
-              </div>
-              <h3>Healthy Recipes</h3>
-              <p>
-                Quick, balanced meals with real ingredients—designed for busy
-                weekdays and lazy weekends alike. Each recipe includes prep time,
-                nutritional highlights, and simple substitutions to fit your preferences.
-              </p>
-              <ul class="card-details">
-                <li>15-30 minute meal ideas</li>
-                <li>Budget-friendly options</li>
-                <li>Dietary variations included</li>
-              </ul>
-            </article>
-            <article class="card about-card">
-              <div class="card-image">
-                <img
-                  src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=800&q=80"
-                  alt="Notebook, pen, and fresh produce used for meal planning"
-                  loading="lazy"
-                />
-              </div>
-              <h3>Smart Planning</h3>
-              <p>
-                Simple frameworks for building plates, planning groceries, and
-                staying consistent without counting every calorie. Learn the plate
-                method, batch cooking basics, and how to stock a healthy pantry.
-              </p>
-              <ul class="card-details">
-                <li>Weekly meal planning templates</li>
-                <li>Shopping list strategies</li>
-                <li>Portion guidance without scales</li>
-              </ul>
-            </article>
-            <article class="card about-card">
-              <div class="card-image">
-                <img
-                  src="https://images.unsplash.com/photo-1514996937319-344454492b37?auto=format&fit=crop&w=800&q=80"
-                  alt="Person relaxing with a healthy drink and fruit"
-                  loading="lazy"
-                />
-              </div>
-              <h3>Wellness & Habits</h3>
-              <p>
-                Small, sustainable changes that support better sleep, mood, and
-                long-term health—one habit at a time. Evidence-based tips that fit
-                into real life, not just perfect scenarios.
-              </p>
-              <ul class="card-details">
-                <li>Habit stacking techniques</li>
-                <li>Sleep and nutrition connection</li>
-                <li>Stress-eating alternatives</li>
-              </ul>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- Latest Articles Section -->
-      <section id="articles" class="section section-alt" aria-labelledby="articles-title">
-        <div class="container">
-          <header class="section-header">
-            <h2 id="articles-title">Latest Articles</h2>
-            <p>
-              Explore our newest posts packed with practical, science-based
-              nutrition advice, each with a simple visual preview.
-            </p>
-          </header>
-          <div class="articles-grid">
-            <article class="card article-card">
-              <div class="article-image">
-                <img
-                  src="https://images.pexels.com/photos/11229124/pexels-photo-11229124.jpeg"
-                  alt="High-protein breakfast with eggs, toast, and vegetables"
-                  loading="lazy"
-                />
-              </div>
-              <div class="article-tag">Breakfast</div>
-              <h3>5 High-Protein Breakfast Ideas</h3>
-              <p>
-                Start your day with balanced meals that keep you full and focused
-                through the morning rush. Discover quick recipes featuring eggs,
-                Greek yogurt, protein smoothies, and savory options that take
-                less than 15 minutes to prepare for 2025.
-              </p>
-              <div class="article-meta">
-                <span class="article-time">5 min read</span>
-                <span class="article-date">Published 2 days ago</span>
-              </div>
-              <button class="btn btn-text js-read-more" data-article="protein-breakfast">
-                Read more
-              </button>
-            </article>
-
-            <article class="card article-card">
-              <div class="article-image">
-                <img
-                  src="https://images.pexels.com/photos/6097890/pexels-photo-6097890.jpeg"
-                  alt="Person reading a nutrition label on a food package"
-                  loading="lazy"
-                />
-              </div>
-              <div class="article-tag">Smart Shopping</div>
-              <h3>How to Read Nutrition Labels</h3>
-              <p>
-                Learn the key parts of a nutrition label so you can make confident,
-                informed choices at the store. We break down serving sizes, added
-                sugars, fiber content, and ingredient lists in simple terms you
-                can use on your next grocery trip.
-              </p>
-              <div class="article-meta">
-                <span class="article-time">7 min read</span>
-                <span class="article-date">Published 5 days ago</span>
-              </div>
-              <button class="btn btn-text js-read-more" data-article="nutrition-labels">
-                Read more
-              </button>
-            </article>
-
-            <article class="card article-card">
-              <div class="article-image">
-                <img
-                  src="https://images.unsplash.com/photo-1505576391880-b3f9d713dc4f?auto=format&fit=crop&w=900&q=80"
-                  alt="Healthy snack plate with fruits, nuts, and vegetables"
-                  loading="lazy"
-                />
-              </div>
-              <div class="article-tag">Lifestyle</div>
-              <h3>Healthy Snacking in a Busy Day</h3>
-              <p>
-                Simple strategies to keep nourishing snacks on hand—without
-                derailing your schedule. Get ideas for portable options, protein-fiber
-                combinations, and how to prep snacks that last all week without getting bored.
-              </p>
-              <div class="article-meta">
-                <span class="article-time">6 min read</span>
-                <span class="article-date">Published 1 week ago</span>
-              </div>
-              <button class="btn btn-text js-read-more" data-article="healthy-snacking">
-                Read more
-              </button>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- Quick Tips Section -->
-      <section id="tips" class="section" aria-labelledby="tips-title">
-        <div class="container">
-          <header class="section-header">
-            <h2 id="tips-title">Quick Daily Tips</h2>
-            <p>
-              Tiny changes that make a big difference when practiced
-              consistently.
-            </p>
-          </header>
-          <div class="tips-grid">
-            <article class="card tip-card">
-              <div class="tip-image">
-                <img
-                  src="https://images.unsplash.com/photo-1523362628745-0c100150b504?auto=format&fit=crop&w=600&q=80"
-                  alt="Glass of water with lemon slices"
-                  loading="lazy"
-                />
-              </div>
-              <h3>Hydrate Early</h3>
-              <p>
-                Drink a glass of water first thing in the morning to gently wake
-                up your body and support digestion. Add a squeeze of lemon for
-                extra flavor and vitamin C. This simple habit helps kickstart
-                metabolism and improves focus throughout the day.
-              </p>
-            </article>
-            <article class="card tip-card">
-              <div class="tip-image">
-                <img
-                  src="https://images.unsplash.com/photo-1495521821757-a1efb6729352?auto=format&fit=crop&w=600&q=80"
-                  alt="Colorful plate with half vegetables"
-                  loading="lazy"
-                />
-              </div>
-              <h3>Half Your Plate</h3>
-              <p>
-                Aim for half your plate to be colorful veggies at lunch and
-                dinner for fiber, vitamins, and volume. This visual guide makes
-                portion control effortless—no measuring cups needed. Mix raw and
-                cooked vegetables for variety and texture.
-              </p>
-            </article>
-            <article class="card tip-card">
-              <div class="tip-image">
-                <img
-                  src="https://images.unsplash.com/photo-1505576391880-b3f9d713dc4f?auto=format&fit=crop&w=600&q=80"
-                  alt="Yogurt with berries and nuts"
-                  loading="lazy"
-                />
-              </div>
-              <h3>Snack with Intention</h3>
-              <p>
-                Pair a source of protein with fiber (like yogurt and berries) to
-                stay satisfied between meals. This combination stabilizes blood
-                sugar, prevents energy crashes, and helps you avoid reaching for
-                processed snacks when hunger strikes.
-              </p>
-            </article>
-            <article class="card tip-card">
-              <div class="tip-image">
-                <img
-                  src="https://images.unsplash.com/photo-1581090700227-1e37b190418e?auto=format&fit=crop&w=600&q=80"
-                  alt="Food package with visible ingredient list"
-                  loading="lazy"
-                />
-              </div>
-              <h3>Read the Ingredients</h3>
-              <p>
-                Scan the ingredient list: shorter, familiar ingredients usually
-                mean less processing. If you can't pronounce it or wouldn't keep
-                it in your pantry, consider choosing a simpler alternative.
-                Ingredients are listed by weight, so the first few matter most.
-              </p>
-            </article>
-            <article class="card tip-card">
-              <div class="tip-image">
-                <img
-                  src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80"
-                  alt="Person enjoying a meal slowly"
-                  loading="lazy"
-                />
-              </div>
-              <h3>Slow Down</h3>
-              <p>
-                Take a few extra minutes to chew and savor your food—your
-                fullness cues need time to catch up. Eating mindfully improves
-                digestion, helps you recognize true hunger, and makes meals more
-                enjoyable. Put your fork down between bites.
-              </p>
-            </article>
-            <article class="card tip-card">
-              <div class="tip-image">
-                <img
-                  src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=600&q=80"
-                  alt="Meal planning notebook with fresh ingredients"
-                  loading="lazy"
-                />
-              </div>
-              <h3>Plan One Meal</h3>
-              <p>
-                If full meal prep feels overwhelming, start by planning just one
-                meal you'll repeat during the week. This builds confidence and
-                reduces decision fatigue. Once comfortable, gradually add more
-                meals to your planning routine.
-              </p>
-            </article>
-            <article class="card tip-card">
-              <div class="tip-image">
-                <img
-                  src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&q=80"
-                  alt="Colorful variety of fresh fruits and vegetables"
-                  loading="lazy"
-                />
-              </div>
-              <h3>Eat the Rainbow</h3>
-              <p>
-                Include different colored fruits and vegetables throughout your day
-                to get a wide range of vitamins, minerals, and antioxidants. Each
-                color provides unique health benefits, so variety is key for optimal
-                nutrition and a more interesting plate.
-              </p>
-            </article>
-            <article class="card tip-card">
-              <div class="tip-image">
-                <img
-                  src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=600&q=80"
-                  alt="Balanced meal with protein, grains, and vegetables"
-                  loading="lazy"
-                />
-              </div>
-              <h3>Balance Your Macros</h3>
-              <p>
-                Aim for a mix of protein, healthy carbs, and good fats in each meal
-                to keep energy stable and stay satisfied longer. Think of it as
-                building a complete plate rather than eliminating food groups.
-                Balance supports both physical and mental performance.
-              </p>
-            </article>
-            <article class="card tip-card">
-              <div class="tip-image">
-                <img
-                  src="https://images.pexels.com/photos/5907815/pexels-photo-5907815.jpeg"
-                  alt="Person preparing healthy meal in kitchen"
-                  loading="lazy"
-                />
-              </div>
-              <h3>Cook at Home More</h3>
-              <p>
-                Preparing meals at home gives you full control over ingredients and
-                portions. Start with simple recipes and build your cooking skills
-                gradually. Even cooking just a few meals per week can significantly
-                improve your nutrition and save money.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- Doctor / Expert Section -->
-      <section id="doctors" class="section section-alt" aria-labelledby="doctors-title">
-        <div class="container">
-          <header class="section-header">
-            <h2 id="doctors-title">Meet Our Nutrition Experts</h2>
-            <p>
-              Our team of certified nutritionists and dietitians are here to guide
-              you on your health journey with evidence-based advice and personalized support.
-            </p>
-          </header>
-          <div class="doctors-grid">
-            <article class="card doctor-card">
-              <div class="doctor-image">
-                <img
-                  src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=600&q=80"
-                  alt="Dr. Sarah Johnson, Registered Dietitian"
-                  loading="lazy"
-                />
-              </div>
-              <div class="doctor-info">
-                <h3>Dr. Sarah Johnson</h3>
-                <p class="doctor-title">Registered Dietitian, MS, RD</p>
-                <p class="doctor-specialty">Specializes in: Weight Management & Diabetes Care</p>
-                <p class="doctor-description">
-                  With over 10 years of experience, Dr. Johnson helps individuals
-                  create sustainable eating patterns that support long-term health
-                  and wellness goals for 2025 year.
-                </p>
-                <div class="doctor-credentials">
-                  <span class="credential-badge">MS Nutrition</span>
-                  <span class="credential-badge">RD Certified</span>
-                </div>
-              </div>
-            </article>
-
-            <article class="card doctor-card">
-              <div class="doctor-image">
-                <img
-                  src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=600&q=80"
-                  alt="Dr. Michael Chen, Clinical Nutritionist"
-                  loading="lazy"
-                />
-              </div>
-              <div class="doctor-info">
-                <h3>Dr. Michael Chen</h3>
-                <p class="doctor-title">Clinical Nutritionist, PhD, CNS</p>
-                <p class="doctor-specialty">Specializes in: Sports Nutrition & Performance</p>
-                <p class="doctor-description">
-                  Dr. Chen combines research expertise with practical guidance to
-                  help athletes and active individuals optimize their nutrition
-                  for peak performance and recovery.
-                </p>
-                <div class="doctor-credentials">
-                  <span class="credential-badge">PhD Nutrition</span>
-                  <span class="credential-badge">CNS Certified</span>
-                </div>
-              </div>
-            </article>
-
-            <article class="card doctor-card">
-              <div class="doctor-image">
-                <img
-                  src="https://media.istockphoto.com/id/1270790502/photo/medical-concept-of-indian-beautiful-female-doctor-with-note-book.jpg?b=1&s=612x612&w=0&k=20&c=JBkrfGirsQLvIrn_IF4OtnaxFmWLN4xLGhzftOlAEJg="
-                  alt="Dr. Emily Rodriguez, Nutrition Therapist"
-                  loading="lazy"
-                />
-              </div>
-              <div class="doctor-info">
-                <h3>Dr. Emily Rodriguez</h3>
-                <p class="doctor-title">Nutrition Therapist, MS, RDN</p>
-                <p class="doctor-specialty">Specializes in: Eating Disorders & Mindful Eating</p>
-                <p class="doctor-description">
-                  Dr. Rodriguez takes a holistic approach to nutrition, focusing on
-                  the relationship between food, body, and mind to promote healing
-                  and sustainable wellness.
-                </p>
-                <div class="doctor-credentials">
-                  <span class="credential-badge">MS Nutrition</span>
-                  <span class="credential-badge">RDN Licensed</span>
-                </div>
-              </div>
-            </article>
-          </div>
-          <div class="doctors-cta">
-            <p>Need personalized nutrition guidance?</p>
-            <button class="btn btn-primary">Book a Consultation</button>
-          </div>
-        </div>
-      </section>
-
-      <!-- Pricing Section -->
-      <section
-        id="pricing"
-        class="section section-alt"
-        aria-labelledby="pricing-title"
-      >
-        <div class="container">
-          <header class="section-header">
-            <h2 id="pricing-title">Choose Your Plan</h2>
-            <p>
-              Select the perfect nutrition plan that fits your lifestyle and goals.
-              All plans include access to our expert team and evidence-based resources.
-            </p>
-          </header>
-          <div class="pricing-grid">
-            <article class="card pricing-card">
-              <div class="pricing-header">
-                <h3>Basic</h3>
-                <div class="pricing-price">
-                  <span class="price-amount">$19</span>
-                  <span class="price-period">/month</span>
-                </div>
-                <p class="pricing-description">Perfect for getting started with nutrition basics</p>
-              </div>
-              <ul class="pricing-features">
-                <li>Weekly nutrition tips via email</li>
-                <li>Access to basic recipes library</li>
-                <li>Monthly meal planning templates</li>
-                <li>Community forum access</li>
-                <li>Email support</li>
-              </ul>
-              <button class="btn btn-primary btn-full">Get Started</button>
-            </article>
-
-            <article class="card pricing-card pricing-card--featured">
-              <div class="pricing-badge">Most Popular</div>
-              <div class="pricing-header">
-                <h3>Premium</h3>
-                <div class="pricing-price">
-                  <span class="price-amount">$49</span>
-                  <span class="price-period">/month</span>
-                </div>
-                <p class="pricing-description">Comprehensive nutrition guidance and support</p>
-              </div>
-              <ul class="pricing-features">
-                <li>Everything in Basic</li>
-                <li>Personalized meal plans</li>
-                <li>1-on-1 monthly consultation</li>
-                <li>Advanced recipes & meal prep guides</li>
-                <li>Nutrition tracking tools</li>
-                <li>Priority email support</li>
-                <li>Access to expert webinars</li>
-              </ul>
-              <button class="btn btn-primary btn-full">Get Started</button>
-            </article>
-
-            <article class="card pricing-card">
-              <div class="pricing-header">
-                <h3>Professional</h3>
-                <div class="pricing-price">
-                  <span class="price-amount">$99</span>
-                  <span class="price-period">/month</span>
-                </div>
-                <p class="pricing-description">Complete nutrition coaching and support</p>
-              </div>
-              <ul class="pricing-features">
-                <li>Everything in Premium</li>
-                <li>Weekly 1-on-1 consultations</li>
-                <li>Custom nutrition program</li>
-                <li>Progress tracking & reports</li>
-                <li>24/7 priority support</li>
-                <li>Exclusive content & resources</li>
-                <li>Direct access to all experts</li>
-              </ul>
-              <button class="btn btn-primary btn-full">Get Started</button>
-            </article>
-          </div>
-          <div class="pricing-footer">
-            <p>All plans include a 7-day free trial. Cancel anytime.</p>
-            <p class="pricing-note">Need help choosing? <a href="#doctors" class="inline-link">Contact our experts</a></p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Contact Section -->
-      <section id="contact" class="section" aria-labelledby="contact-title">
-        <div class="container">
-          <header class="section-header">
-            <h2 id="contact-title">Get in Touch</h2>
-            <p>
-              Have questions or need personalized nutrition advice? We're here to help.
-              Reach out to us and we'll get back to you as soon as possible.
-            </p>
-          </header>
-          <div class="contact-layout">
-            <div class="contact-info">
-              <div class="contact-info-card">
-                <div class="contact-icon">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3 8L10.89 13.26C11.2187 13.4793 11.6049 13.5963 12 13.5963C12.3951 13.5963 12.7813 13.4793 13.11 13.26L21 8M5 19H19C19.5304 19 20.0391 18.7893 20.4142 18.4142C20.7893 18.0391 21 17.5304 21 17V7C21 6.46957 20.7893 5.96086 20.4142 5.58579C20.0391 5.21071 19.5304 5 19 5H5C4.46957 5 3.96086 5.21071 3.58579 5.58579C3.21071 5.96086 3 6.46957 3 7V17C3 17.5304 3.21071 18.0391 3.58579 18.4142C3.96086 18.7893 4.46957 19 5 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </div>
-                <h3>Email Us</h3>
-                <p>info@nutritionblog.com</p>
-                <p>support@nutritionblog.com</p>
-              </div>
-
-              <div class="contact-info-card">
-                <div class="contact-icon">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3 5C3 3.89543 3.89543 3 5 3H8.27924C8.70967 3 9.09181 3.27543 9.22792 3.68377L10.7257 8.17721C10.8831 8.64932 10.6694 9.16531 10.2243 9.38787L7.96701 10.5165C9.06925 12.9612 11.0388 14.9308 13.4835 16.033L14.6121 13.7757C14.8347 13.3306 15.3507 13.1169 15.8228 13.2743L20.3162 14.7721C20.7246 14.9082 21 15.2903 21 15.7208V19C21 20.1046 20.1046 21 19 21H18C9.71573 21 3 14.2843 3 6V5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </div>
-                <h3>Call Us</h3>
-                <p>+1 (555) 123-4567</p>
-                <p>Mon-Fri: 9:00 AM - 6:00 PM</p>
-              </div>
-
-              <div class="contact-info-card">
-                <div class="contact-icon">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </div>
-                <h3>Visit Us</h3>
-                <p>123 Health Street</p>
-                <p>Nutrition City, NC 12345</p>
-              </div>
-
-              <div class="contact-info-card">
-                <div class="contact-icon">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M18 2H15C13.6739 2 12.4021 2.52678 11.4645 3.46447C10.5268 4.40215 10 5.67392 10 7V10H7V14H10V22H14V14H17L18 10H14V7C14 6.73478 14.1054 6.48043 14.2929 6.29289C14.4804 6.10536 14.7348 6 15 6H18V2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </div>
-                <h3>Follow Us</h3>
-                <div class="contact-social">
-                  <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="contact-social-link">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                    </svg>
-                  </a>
-                  <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter" class="contact-social-link">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
-                    </svg>
-                  </a>
-                  <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="contact-social-link">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                    </svg>
-                  </a>
-                  <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="contact-social-link">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                    </svg>
-                  </a>
-                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="contact-social-link">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <form id="contact-form" class="contact-form" novalidate aria-describedby="contact-message">
-              <h3>Send us a Message</h3>
-              <div class="form-field">
-                <label for="contact-name">Full Name</label>
-                <input
-                  type="text"
-                  id="contact-name"
-                  name="name"
-                  autocomplete="name"
-                  placeholder="Enter your full name"
-                  required
-                />
-                <p class="field-error" data-for="name"></p>
-              </div>
-
-              <div class="form-field">
-                <label for="contact-email">Email</label>
-                <input
-                  type="email"
-                  id="contact-email"
-                  name="email"
-                  autocomplete="email"
-                  placeholder="Enter your email"
-                  required
-                />
-                <p class="field-error" data-for="email"></p>
-              </div>
-
-              <div class="form-field">
-                <label for="contact-subject">Subject</label>
-                <input
-                  type="text"
-                  id="contact-subject"
-                  name="subject"
-                  placeholder="What is this regarding?"
-                  required
-                />
-                <p class="field-error" data-for="subject"></p>
-              </div>
-
-              <div class="form-field">
-                <label for="contact-message">Message</label>
-                <textarea
-                  id="contact-message"
-                  name="message"
-                  rows="5"
-                  placeholder="Tell us how we can help you..."
-                  required
-                ></textarea>
-                <p class="field-error" data-for="message"></p>
-              </div>
-
-              <button type="submit" class="btn btn-primary btn-full">
-                Send Message
-              </button>
-              <p id="contact-form-message" class="form-message" aria-live="polite"></p>
-            </form>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <button class="back-to-top" aria-label="Back to top">
-      ↑
-    </button>
-
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <div class="footer-content">
-          <div class="footer-brand">
-            <a href="#home" class="footer-logo">
-              <svg class="logo-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 2C8 2 5 5 5 9C5 13 8 18 12 20C16 18 19 13 19 9C19 5 16 2 12 2Z" fill="currentColor" fill-opacity="0.9"/>
-                <path d="M12 4C9.5 4 7.5 6 7.5 8.5C7.5 11 9.5 13.5 12 15C14.5 13.5 16.5 11 16.5 8.5C16.5 6 14.5 4 12 4Z" fill="white" fill-opacity="0.9"/>
-                <path d="M12 6L10 8L12 10L14 8L12 6Z" fill="currentColor" fill-opacity="0.6"/>
-              </svg>
-              Nutrition<span>Blog</span>
-            </a>
-            <p class="footer-copyright">© <span id="year"></span> Nutrition Blog. All rights reserved.</p>
-            <div class="social-media">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Facebook" class="social-link">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                </svg>
-              </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Twitter" class="social-link">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
-                </svg>
-              </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram" class="social-link">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                </svg>
-              </a>
-              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="Subscribe to our YouTube channel" class="social-link">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                </svg>
-              </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="Connect with us on LinkedIn" class="social-link">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                </svg>
-              </a>
-            </div>
-          </div>
-          <div class="footer-links">
-            <a href="#home">Home</a>
-            <span aria-hidden="true">•</span>
-            <a href="#pricing">Pricing</a>
-            <span aria-hidden="true">•</span>
-            <a href="#contact">Contact</a>
-            <span aria-hidden="true">•</span>
-            <a href="#" aria-disabled="true">Privacy (coming soon)</a>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <!-- Modal for article previews -->
-    <div
-      class="modal"
-      id="article-modal"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="article-modal-title"
-      aria-hidden="true"
-    >
-      <div class="modal-backdrop" data-close-modal></div>
-      <div class="modal-dialog" role="document">
-        <button
-          class="modal-close"
-          type="button"
-          aria-label="Close article preview"
-          data-close-modal
-        >
-          ×
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="logo">
+        <svg class="logo-icon" width="28" height="28" viewBox="0 0 24 24" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2C8 2 5 5 5 9C5 13 8 18 12 20C16 18 19 13 19 9C19 5 16 2 12 2Z" fill="currentColor"
+            fill-opacity="0.9" />
+          <path d="M12 4C9.5 4 7.5 6 7.5 8.5C7.5 11 9.5 13.5 12 15C14.5 13.5 16.5 11 16.5 8.5C16.5 6 14.5 4 12 4Z"
+            fill="white" fill-opacity="0.9" />
+          <path d="M12 6L10 8L12 10L14 8L12 6Z" fill="currentColor" fill-opacity="0.6" />
+        </svg>
+        Nutrition<span>Blog</span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
-        <div class="modal-body">
-          <h2 id="article-modal-title">Article preview</h2>
-          <p id="article-modal-content">
-            Detailed article previews are coming soon. For now, enjoy a short
-            teaser of the content we’re preparing for you.
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#articles">Latest Articles</a></li>
+          <li><a href="#tips">Tips</a></li>
+          <li><a href="#doctors">Experts</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="login.html" class="btn btn-secondary">Login</a></li>
+          <li><a href="register.html" class="btn btn-primary">Sign Up</a></li>
+          <li class="nav-item-dropdown" aria-expanded="false">
+            <a href="#" class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+              Account
+              <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 12 12" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </a>
+            <ul class="nav-dropdown-menu" role="menu">
+              <li role="none"><a href="user-dashboard.html" role="menuitem">Dashboard</a></li>
+              <li role="none"><a href="admin-dashboard.html" role="menuitem">Admin Panel</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home">
+    <!-- Hero Section -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <span class="hero-badge">Science-backed nutrition for real life</span>
+          <h1 id="hero-title">Feel-good nutrition made simple</h1>
+          <p>
+            Build balanced meals, smarter habits, and sustainable routines with
+            practical guidance from certified nutrition experts.
           </p>
+          <div class="hero-buttons">
+            <button class="btn btn-primary js-scroll-to-pricing">
+              View Pricing Plans
+            </button>
+            <button class="btn btn-secondary js-scroll-to-contact">
+              Contact Us
+            </button>
+          </div>
+          <div class="hero-highlights" aria-label="Key focus areas">
+            <span>Balanced Meals</span>
+            <span>Healthy Habits</span>
+            <span>Evidence-Based</span>
+            <span>Personalized Plans</span>
+          </div>
+
+        </div>
+        <div class="hero-image">
+          <div class="hero-image-frame">
+            <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1200&q=80"
+              alt="Colorful healthy meal with fresh vegetables, grains, and proteins on a white plate" loading="eager"
+              class="hero-main-image" />
+            <div class="hero-floating-card hero-card-top">
+              <p class="hero-card-title">Weekly meal plan</p>
+              <p class="hero-card-value">Ready in 10 mins</p>
+            </div>
+            <div class="hero-floating-card hero-card-bottom">
+              <p class="hero-card-title">Macro balance</p>
+              <p class="hero-card-value">Protein + fiber focus</p>
+            </div>
+          </div>
+          <div class="hero-caption-row">
+            <span class="hero-caption-dot" aria-hidden="true"></span>
+            <p class="hero-caption">Colorful plates, simple choices, better health.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section" aria-labelledby="about-title">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="about-title">About Nutrition Blog</h2>
+          <p>
+            Nutrition Blog is your friendly guide to evidence-based eating. No
+            fads, no fear—just practical tips you can actually use, with
+            visuals that make healthy food feel simple and inspiring.
+          </p>
+        </header>
+        <div class="about-grid">
+          <article class="card about-card">
+            <div class="card-image">
+              <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80"
+                alt="Colorful bowl with fresh vegetables and grains" loading="lazy" />
+            </div>
+            <h3>Healthy Recipes</h3>
+            <p>
+              Quick, balanced meals with real ingredients—designed for busy
+              weekdays and lazy weekends alike. Each recipe includes prep time,
+              nutritional highlights, and simple substitutions to fit your preferences.
+            </p>
+            <ul class="card-details">
+              <li>15-30 minute meal ideas</li>
+              <li>Budget-friendly options</li>
+              <li>Dietary variations included</li>
+            </ul>
+          </article>
+          <article class="card about-card">
+            <div class="card-image">
+              <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=800&q=80"
+                alt="Notebook, pen, and fresh produce used for meal planning" loading="lazy" />
+            </div>
+            <h3>Smart Planning</h3>
+            <p>
+              Simple frameworks for building plates, planning groceries, and
+              staying consistent without counting every calorie. Learn the plate
+              method, batch cooking basics, and how to stock a healthy pantry.
+            </p>
+            <ul class="card-details">
+              <li>Weekly meal planning templates</li>
+              <li>Shopping list strategies</li>
+              <li>Portion guidance without scales</li>
+            </ul>
+          </article>
+          <article class="card about-card">
+            <div class="card-image">
+              <img src="https://images.unsplash.com/photo-1514996937319-344454492b37?auto=format&fit=crop&w=800&q=80"
+                alt="Person relaxing with a healthy drink and fruit" loading="lazy" />
+            </div>
+            <h3>Wellness & Habits</h3>
+            <p>
+              Small, sustainable changes that support better sleep, mood, and
+              long-term health—one habit at a time. Evidence-based tips that fit
+              into real life, not just perfect scenarios.
+            </p>
+            <ul class="card-details">
+              <li>Habit stacking techniques</li>
+              <li>Sleep and nutrition connection</li>
+              <li>Stress-eating alternatives</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Latest Articles Section -->
+    <section id="articles" class="section section-alt" aria-labelledby="articles-title">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="articles-title">Latest Articles</h2>
+          <p>
+            Explore our newest posts packed with practical, science-based
+            nutrition advice, each with a simple visual preview.
+          </p>
+        </header>
+        <div class="articles-grid">
+          <article class="card article-card">
+            <div class="article-image">
+              <img src="https://images.pexels.com/photos/11229124/pexels-photo-11229124.jpeg"
+                alt="High-protein breakfast with eggs, toast, and vegetables" loading="lazy" />
+            </div>
+            <div class="article-tag">Breakfast</div>
+            <h3>5 High-Protein Breakfast Ideas</h3>
+            <p>
+              Start your day with balanced meals that keep you full and focused
+              through the morning rush. Discover quick recipes featuring eggs,
+              Greek yogurt, protein smoothies, and savory options that take
+              less than 15 minutes to prepare for 2025.
+            </p>
+            <div class="article-meta">
+              <span class="article-time">5 min read</span>
+              <span class="article-date">Published 2 days ago</span>
+            </div>
+            <button class="btn btn-text js-read-more" data-article="protein-breakfast">
+              Read more
+            </button>
+          </article>
+
+          <article class="card article-card">
+            <div class="article-image">
+              <img src="https://images.pexels.com/photos/6097890/pexels-photo-6097890.jpeg"
+                alt="Person reading a nutrition label on a food package" loading="lazy" />
+            </div>
+            <div class="article-tag">Smart Shopping</div>
+            <h3>How to Read Nutrition Labels</h3>
+            <p>
+              Learn the key parts of a nutrition label so you can make confident,
+              informed choices at the store. We break down serving sizes, added
+              sugars, fiber content, and ingredient lists in simple terms you
+              can use on your next grocery trip.
+            </p>
+            <div class="article-meta">
+              <span class="article-time">7 min read</span>
+              <span class="article-date">Published 5 days ago</span>
+            </div>
+            <button class="btn btn-text js-read-more" data-article="nutrition-labels">
+              Read more
+            </button>
+          </article>
+
+          <article class="card article-card">
+            <div class="article-image">
+              <img src="https://images.unsplash.com/photo-1505576391880-b3f9d713dc4f?auto=format&fit=crop&w=900&q=80"
+                alt="Healthy snack plate with fruits, nuts, and vegetables" loading="lazy" />
+            </div>
+            <div class="article-tag">Lifestyle</div>
+            <h3>Healthy Snacking in a Busy Day</h3>
+            <p>
+              Simple strategies to keep nourishing snacks on hand—without
+              derailing your schedule. Get ideas for portable options, protein-fiber
+              combinations, and how to prep snacks that last all week without getting bored.
+            </p>
+            <div class="article-meta">
+              <span class="article-time">6 min read</span>
+              <span class="article-date">Published 1 week ago</span>
+            </div>
+            <button class="btn btn-text js-read-more" data-article="healthy-snacking">
+              Read more
+            </button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Tips Section -->
+    <section id="tips" class="section" aria-labelledby="tips-title">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="tips-title">Quick Daily Tips</h2>
+          <p>
+            Tiny changes that make a big difference when practiced
+            consistently.
+          </p>
+        </header>
+        <div class="tips-grid">
+          <article class="card tip-card">
+            <div class="tip-image">
+              <img src="https://images.unsplash.com/photo-1523362628745-0c100150b504?auto=format&fit=crop&w=600&q=80"
+                alt="Glass of water with lemon slices" loading="lazy" />
+            </div>
+            <h3>Hydrate Early</h3>
+            <p>
+              Drink a glass of water first thing in the morning to gently wake
+              up your body and support digestion. Add a squeeze of lemon for
+              extra flavor and vitamin C. This simple habit helps kickstart
+              metabolism and improves focus throughout the day.
+            </p>
+          </article>
+          <article class="card tip-card">
+            <div class="tip-image">
+              <img src="https://images.unsplash.com/photo-1495521821757-a1efb6729352?auto=format&fit=crop&w=600&q=80"
+                alt="Colorful plate with half vegetables" loading="lazy" />
+            </div>
+            <h3>Half Your Plate</h3>
+            <p>
+              Aim for half your plate to be colorful veggies at lunch and
+              dinner for fiber, vitamins, and volume. This visual guide makes
+              portion control effortless—no measuring cups needed. Mix raw and
+              cooked vegetables for variety and texture.
+            </p>
+          </article>
+          <article class="card tip-card">
+            <div class="tip-image">
+              <img src="https://images.unsplash.com/photo-1505576391880-b3f9d713dc4f?auto=format&fit=crop&w=600&q=80"
+                alt="Yogurt with berries and nuts" loading="lazy" />
+            </div>
+            <h3>Snack with Intention</h3>
+            <p>
+              Pair a source of protein with fiber (like yogurt and berries) to
+              stay satisfied between meals. This combination stabilizes blood
+              sugar, prevents energy crashes, and helps you avoid reaching for
+              processed snacks when hunger strikes.
+            </p>
+          </article>
+          <article class="card tip-card">
+            <div class="tip-image">
+              <img src="https://images.unsplash.com/photo-1581090700227-1e37b190418e?auto=format&fit=crop&w=600&q=80"
+                alt="Food package with visible ingredient list" loading="lazy" />
+            </div>
+            <h3>Read the Ingredients</h3>
+            <p>
+              Scan the ingredient list: shorter, familiar ingredients usually
+              mean less processing. If you can't pronounce it or wouldn't keep
+              it in your pantry, consider choosing a simpler alternative.
+              Ingredients are listed by weight, so the first few matter most.
+            </p>
+          </article>
+          <article class="card tip-card">
+            <div class="tip-image">
+              <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80"
+                alt="Person enjoying a meal slowly" loading="lazy" />
+            </div>
+            <h3>Slow Down</h3>
+            <p>
+              Take a few extra minutes to chew and savor your food—your
+              fullness cues need time to catch up. Eating mindfully improves
+              digestion, helps you recognize true hunger, and makes meals more
+              enjoyable. Put your fork down between bites.
+            </p>
+          </article>
+          <article class="card tip-card">
+            <div class="tip-image">
+              <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=600&q=80"
+                alt="Meal planning notebook with fresh ingredients" loading="lazy" />
+            </div>
+            <h3>Plan One Meal</h3>
+            <p>
+              If full meal prep feels overwhelming, start by planning just one
+              meal you'll repeat during the week. This builds confidence and
+              reduces decision fatigue. Once comfortable, gradually add more
+              meals to your planning routine.
+            </p>
+          </article>
+          <article class="card tip-card">
+            <div class="tip-image">
+              <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&q=80"
+                alt="Colorful variety of fresh fruits and vegetables" loading="lazy" />
+            </div>
+            <h3>Eat the Rainbow</h3>
+            <p>
+              Include different colored fruits and vegetables throughout your day
+              to get a wide range of vitamins, minerals, and antioxidants. Each
+              color provides unique health benefits, so variety is key for optimal
+              nutrition and a more interesting plate.
+            </p>
+          </article>
+          <article class="card tip-card">
+            <div class="tip-image">
+              <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=600&q=80"
+                alt="Balanced meal with protein, grains, and vegetables" loading="lazy" />
+            </div>
+            <h3>Balance Your Macros</h3>
+            <p>
+              Aim for a mix of protein, healthy carbs, and good fats in each meal
+              to keep energy stable and stay satisfied longer. Think of it as
+              building a complete plate rather than eliminating food groups.
+              Balance supports both physical and mental performance.
+            </p>
+          </article>
+          <article class="card tip-card">
+            <div class="tip-image">
+              <img src="https://images.pexels.com/photos/5907815/pexels-photo-5907815.jpeg"
+                alt="Person preparing healthy meal in kitchen" loading="lazy" />
+            </div>
+            <h3>Cook at Home More</h3>
+            <p>
+              Preparing meals at home gives you full control over ingredients and
+              portions. Start with simple recipes and build your cooking skills
+              gradually. Even cooking just a few meals per week can significantly
+              improve your nutrition and save money.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Doctor / Expert Section -->
+    <section id="doctors" class="section section-alt" aria-labelledby="doctors-title">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="doctors-title">Meet Our Nutrition Experts</h2>
+          <p>
+            Our team of certified nutritionists and dietitians are here to guide
+            you on your health journey with evidence-based advice and personalized support.
+          </p>
+        </header>
+        <div class="doctors-grid">
+          <article class="card doctor-card">
+            <div class="doctor-image">
+              <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=600&q=80"
+                alt="Dr. Sarah Johnson, Registered Dietitian" loading="lazy" />
+            </div>
+            <div class="doctor-info">
+              <h3>Dr. Sarah Johnson</h3>
+              <p class="doctor-title">Registered Dietitian, MS, RD</p>
+              <p class="doctor-specialty">Specializes in: Weight Management & Diabetes Care</p>
+              <p class="doctor-description">
+                With over 10 years of experience, Dr. Johnson helps individuals
+                create sustainable eating patterns that support long-term health
+                and wellness goals for 2025 year.
+              </p>
+              <div class="doctor-credentials">
+                <span class="credential-badge">MS Nutrition</span>
+                <span class="credential-badge">RD Certified</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card doctor-card">
+            <div class="doctor-image">
+              <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=600&q=80"
+                alt="Dr. Michael Chen, Clinical Nutritionist" loading="lazy" />
+            </div>
+            <div class="doctor-info">
+              <h3>Dr. Michael Chen</h3>
+              <p class="doctor-title">Clinical Nutritionist, PhD, CNS</p>
+              <p class="doctor-specialty">Specializes in: Sports Nutrition & Performance</p>
+              <p class="doctor-description">
+                Dr. Chen combines research expertise with practical guidance to
+                help athletes and active individuals optimize their nutrition
+                for peak performance and recovery.
+              </p>
+              <div class="doctor-credentials">
+                <span class="credential-badge">PhD Nutrition</span>
+                <span class="credential-badge">CNS Certified</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card doctor-card">
+            <div class="doctor-image">
+              <img
+                src="https://media.istockphoto.com/id/1270790502/photo/medical-concept-of-indian-beautiful-female-doctor-with-note-book.jpg?b=1&s=612x612&w=0&k=20&c=JBkrfGirsQLvIrn_IF4OtnaxFmWLN4xLGhzftOlAEJg="
+                alt="Dr. Emily Rodriguez, Nutrition Therapist" loading="lazy" />
+            </div>
+            <div class="doctor-info">
+              <h3>Dr. Emily Rodriguez</h3>
+              <p class="doctor-title">Nutrition Therapist, MS, RDN</p>
+              <p class="doctor-specialty">Specializes in: Eating Disorders & Mindful Eating</p>
+              <p class="doctor-description">
+                Dr. Rodriguez takes a holistic approach to nutrition, focusing on
+                the relationship between food, body, and mind to promote healing
+                and sustainable wellness.
+              </p>
+              <div class="doctor-credentials">
+                <span class="credential-badge">MS Nutrition</span>
+                <span class="credential-badge">RDN Licensed</span>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="doctors-cta">
+          <p>Need personalized nutrition guidance?</p>
+          <button class="btn btn-primary">Book a Consultation</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="section section-alt" aria-labelledby="pricing-title">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="pricing-title">Choose Your Plan</h2>
+          <p>
+            Select the perfect nutrition plan that fits your lifestyle and goals.
+            All plans include access to our expert team and evidence-based resources.
+          </p>
+        </header>
+        <div class="pricing-grid">
+          <article class="card pricing-card">
+            <div class="pricing-header">
+              <h3>Basic</h3>
+              <div class="pricing-price">
+                <span class="price-amount">$19</span>
+                <span class="price-period">/month</span>
+              </div>
+              <p class="pricing-description">Perfect for getting started with nutrition basics</p>
+            </div>
+            <ul class="pricing-features">
+              <li>Weekly nutrition tips via email</li>
+              <li>Access to basic recipes library</li>
+              <li>Monthly meal planning templates</li>
+              <li>Community forum access</li>
+              <li>Email support</li>
+            </ul>
+            <button class="btn btn-primary btn-full">Get Started</button>
+          </article>
+
+          <article class="card pricing-card pricing-card--featured">
+            <div class="pricing-badge">Most Popular</div>
+            <div class="pricing-header">
+              <h3>Premium</h3>
+              <div class="pricing-price">
+                <span class="price-amount">$49</span>
+                <span class="price-period">/month</span>
+              </div>
+              <p class="pricing-description">Comprehensive nutrition guidance and support</p>
+            </div>
+            <ul class="pricing-features">
+              <li>Everything in Basic</li>
+              <li>Personalized meal plans</li>
+              <li>1-on-1 monthly consultation</li>
+              <li>Advanced recipes & meal prep guides</li>
+              <li>Nutrition tracking tools</li>
+              <li>Priority email support</li>
+              <li>Access to expert webinars</li>
+            </ul>
+            <button class="btn btn-primary btn-full">Get Started</button>
+          </article>
+
+          <article class="card pricing-card">
+            <div class="pricing-header">
+              <h3>Professional</h3>
+              <div class="pricing-price">
+                <span class="price-amount">$99</span>
+                <span class="price-period">/month</span>
+              </div>
+              <p class="pricing-description">Complete nutrition coaching and support</p>
+            </div>
+            <ul class="pricing-features">
+              <li>Everything in Premium</li>
+              <li>Weekly 1-on-1 consultations</li>
+              <li>Custom nutrition program</li>
+              <li>Progress tracking & reports</li>
+              <li>24/7 priority support</li>
+              <li>Exclusive content & resources</li>
+              <li>Direct access to all experts</li>
+            </ul>
+            <button class="btn btn-primary btn-full">Get Started</button>
+          </article>
+        </div>
+        <div class="pricing-footer">
+          <p>All plans include a 7-day free trial. Cancel anytime.</p>
+          <p class="pricing-note">Need help choosing? <a href="#doctors" class="inline-link">Contact our experts</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section" aria-labelledby="contact-title">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="contact-title">Get in Touch</h2>
+          <p>
+            Have questions or need personalized nutrition advice? We're here to help.
+            Reach out to us and we'll get back to you as soon as possible.
+          </p>
+        </header>
+        <div class="contact-layout">
+          <div class="contact-info">
+            <div class="contact-info-card">
+              <div class="contact-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M3 8L10.89 13.26C11.2187 13.4793 11.6049 13.5963 12 13.5963C12.3951 13.5963 12.7813 13.4793 13.11 13.26L21 8M5 19H19C19.5304 19 20.0391 18.7893 20.4142 18.4142C20.7893 18.0391 21 17.5304 21 17V7C21 6.46957 20.7893 5.96086 20.4142 5.58579C20.0391 5.21071 19.5304 5 19 5H5C4.46957 5 3.96086 5.21071 3.58579 5.58579C3.21071 5.96086 3 6.46957 3 7V17C3 17.5304 3.21071 18.0391 3.58579 18.4142C3.96086 18.7893 4.46957 19 5 19Z"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <h3>Email Us</h3>
+              <p>info@nutritionblog.com</p>
+              <p>support@nutritionblog.com</p>
+            </div>
+
+            <div class="contact-info-card">
+              <div class="contact-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M3 5C3 3.89543 3.89543 3 5 3H8.27924C8.70967 3 9.09181 3.27543 9.22792 3.68377L10.7257 8.17721C10.8831 8.64932 10.6694 9.16531 10.2243 9.38787L7.96701 10.5165C9.06925 12.9612 11.0388 14.9308 13.4835 16.033L14.6121 13.7757C14.8347 13.3306 15.3507 13.1169 15.8228 13.2743L20.3162 14.7721C20.7246 14.9082 21 15.2903 21 15.7208V19C21 20.1046 20.1046 21 19 21H18C9.71573 21 3 14.2843 3 6V5Z"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <h3>Call Us</h3>
+              <p>+1 (555) 123-4567</p>
+              <p>Mon-Fri: 9:00 AM - 6:00 PM</p>
+            </div>
+
+            <div class="contact-info-card">
+              <div class="contact-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <h3>Visit Us</h3>
+              <p>123 Health Street</p>
+              <p>Nutrition City, NC 12345</p>
+            </div>
+
+            <div class="contact-info-card">
+              <div class="contact-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M18 2H15C13.6739 2 12.4021 2.52678 11.4645 3.46447C10.5268 4.40215 10 5.67392 10 7V10H7V14H10V22H14V14H17L18 10H14V7C14 6.73478 14.1054 6.48043 14.2929 6.29289C14.4804 6.10536 14.7348 6 15 6H18V2Z"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <h3>Follow Us</h3>
+              <div class="contact-social">
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"
+                  class="contact-social-link">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                  </svg>
+                </a>
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter"
+                  class="contact-social-link">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
+                  </svg>
+                </a>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
+                  class="contact-social-link">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                  </svg>
+                </a>
+                <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"
+                  class="contact-social-link">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                  </svg>
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"
+                  class="contact-social-link">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <form id="contact-form" class="contact-form" novalidate aria-describedby="contact-message">
+            <h3>Send us a Message</h3>
+            <div class="form-field">
+              <label for="contact-name">Full Name</label>
+              <input type="text" id="contact-name" name="name" autocomplete="name" placeholder="Enter your full name"
+                required />
+              <p class="field-error" data-for="name"></p>
+            </div>
+
+            <div class="form-field">
+              <label for="contact-email">Email</label>
+              <input type="email" id="contact-email" name="email" autocomplete="email" placeholder="Enter your email"
+                required />
+              <p class="field-error" data-for="email"></p>
+            </div>
+
+            <div class="form-field">
+              <label for="contact-subject">Subject</label>
+              <input type="text" id="contact-subject" name="subject" placeholder="What is this regarding?" required />
+              <p class="field-error" data-for="subject"></p>
+            </div>
+
+            <div class="form-field">
+              <label for="contact-message">Message</label>
+              <textarea id="contact-message" name="message" rows="5" placeholder="Tell us how we can help you..."
+                required></textarea>
+              <p class="field-error" data-for="message"></p>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full">
+              Send Message
+            </button>
+            <p id="contact-form-message" class="form-message" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <button class="back-to-top" aria-label="Back to top">
+    ↑
+  </button>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <a href="#home" class="footer-logo">
+            <svg class="logo-icon" width="32" height="32" viewBox="0 0 24 24" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2C8 2 5 5 5 9C5 13 8 18 12 20C16 18 19 13 19 9C19 5 16 2 12 2Z" fill="currentColor"
+                fill-opacity="0.9" />
+              <path d="M12 4C9.5 4 7.5 6 7.5 8.5C7.5 11 9.5 13.5 12 15C14.5 13.5 16.5 11 16.5 8.5C16.5 6 14.5 4 12 4Z"
+                fill="white" fill-opacity="0.9" />
+              <path d="M12 6L10 8L12 10L14 8L12 6Z" fill="currentColor" fill-opacity="0.6" />
+            </svg>
+            Nutrition<span>Blog</span>
+          </a>
+          <p class="footer-copyright">© <span id="year"></span> Nutrition Blog. All rights reserved.</p>
+          <div class="social-media">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Facebook"
+              class="social-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+              </svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Twitter"
+              class="social-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
+              </svg>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+              aria-label="Follow us on Instagram" class="social-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+              </svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer"
+              aria-label="Subscribe to our YouTube channel" class="social-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+              </svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+              aria-label="Connect with us on LinkedIn" class="social-link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <a href="#home">Home</a>
+          <span aria-hidden="true">•</span>
+          <a href="#pricing">Pricing</a>
+          <span aria-hidden="true">•</span>
+          <a href="#contact">Contact</a>
+          <span aria-hidden="true">•</span>
+          <a href="#" aria-disabled="true">Privacy (coming soon)</a>
         </div>
       </div>
     </div>
+  </footer>
 
-    <script src="scripts.js"></script>
-  </body>
+  <!-- Modal for article previews -->
+  <div class="modal" id="article-modal" role="dialog" aria-modal="true" aria-labelledby="article-modal-title"
+    aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-dialog" role="document">
+      <button class="modal-close" type="button" aria-label="Close article preview" data-close-modal>
+        ×
+      </button>
+      <div class="modal-body">
+        <h2 id="article-modal-title">Article preview</h2>
+        <p id="article-modal-content">
+          Detailed article previews are coming soon. For now, enjoy a short
+          teaser of the content we’re preparing for you.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+
 </html>
-
-
